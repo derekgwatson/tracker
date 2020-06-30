@@ -165,6 +165,10 @@ return [
         /*
          * Package Service Providers...
          */
+	AlgoWeb\PODataLaravel\Providers\MetadataProvider::class,
+	AlgoWeb\PODataLaravel\Providers\MetadataRouteProvider::class,
+	AlgoWeb\PODataLaravel\Providers\QueryProvider::class,
+	AlgoWeb\PODataLaravel\Providers\MetadataControllerProvider::class,
 
         /*
          * Application Service Providers...
