@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('showstatus', [
+        'orderno' => '1008725.A', 
+        'email' => 'jj@gmail.com',
+        'customer' => 'Jacob Johns',
+        'phone' => '02 6123 4545',
+        'orderdate' => 'Sat 23 Apr 2020',
+        'mobile' => '0412 345 345',
+        ]);
 });
 
 Auth::routes();

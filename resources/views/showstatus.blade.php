@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Watson Blinds Tracker</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -74,21 +74,21 @@
 				<table class="table" border="0">
 					<tr>
 						<td width="10%"><strong>Order: </strong></td>
-						<td width="40%" align="left">1008447.A</td>
+						<td width="40%" align="left">{{ $orderno }}</td>
                         <td width="10%"><strong>Email: </strong></td>
-                        <td width="40%" align="left">&nbsp;</td>
+                        <td width="40%" align="left">&nbsp;{{ $email }}</td>
 					</tr>
 					<tr>
 						<td><strong>Customer: </strong></td>
-						<td align="left">DJ Homes</td>
+						<td align="left">{{ $customer }}</td>
 				        <td><strong>Phone: </strong></td>
-                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;{{ $phone }}</td>
 					</tr>
 					<tr>
 						<td><strong>Order&nbsp;Date: </strong></td>
-						<td align="left">Sat Jun 27 2020</td>
+						<td align="left">{{ $orderdate }}</td>
 				        <td><strong>Mobile: </strong></td>
-                        <td align="left">0488 787 894</td>
+                        <td align="left">{{ $mobile }}</td>
 					</tr>
                 </table>
                 <hr>
