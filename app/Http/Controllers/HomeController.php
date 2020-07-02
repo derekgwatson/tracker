@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     /**
@@ -23,6 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $orderinfo['orderno'] = '1008725.A'; 
+        $orderinfo['email'] = 'jj@gmail.com';
+        $orderinfo['customer'] = 'Jacob Johns';
+        $orderinfo['phone'] = '02 6123 4545';
+        $orderinfo['orderdate'] = 'Sat 23 Apr 2020';
+        $orderinfo['mobile'] = '0412 345 345';
+        return view('showstatus', $orderinfo);
     }
 }

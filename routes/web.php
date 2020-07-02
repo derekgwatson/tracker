@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/old', function () {
     return view('showstatus', [
         'orderno' => '1008725.A', 
         'email' => 'jj@gmail.com',
@@ -24,4 +24,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
