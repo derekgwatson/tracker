@@ -68,6 +68,7 @@ class BuzDataExportItemController extends Controller
         $dateFormat = 'Y-m-d G:i:s';
         $rowNum = 0;
         $file_handle = fopen($request->file('file')->getRealPath(), 'r');
+        BuzDataExportItem::truncate();
         while (!feof($file_handle)) {
             $row = fgetcsv($file_handle);
             if ($rowNum > 0 && $row != FALSE) {
@@ -92,6 +93,7 @@ class BuzDataExportItemController extends Controller
         }
         fclose($file_handle);
 
+        echo "Success! ".$rowNum." records created";
     }
 
 }
